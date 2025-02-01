@@ -24,6 +24,7 @@
     left: 0;
     border-bottom: 1px solid #ddd;
     z-index: 100;
+    transition: top 0.3s;
   }
   
   nav ul {
@@ -203,4 +204,15 @@
       justify-content: space-around;
     }
   }
-  
+
+  /* Class to hide header */
+  header.hide {
+    top: -60px;
+  }
+
+  /* Make nav smaller on mobile */
+  @media (max-width: 768px) {
+    nav ul {
+        font-size: 0.9rem;
+    }
+  }

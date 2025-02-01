@@ -6,4 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-  
+
+let prevScrollPos = window.pageYOffset;
+window.addEventListener('scroll', () => {
+  const currentScrollPos = window.pageYOffset;
+  const header = document.querySelector('header');
+  if (prevScrollPos > currentScrollPos) {
+    header.classList.remove('hide');
+  } else {
+    header.classList.add('hide');
+  }
+  prevScrollPos = currentScrollPos;
+});
