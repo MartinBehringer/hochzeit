@@ -1,3 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // No additional scripts needed for backend form submission
-});
+    const flipCards = document.querySelectorAll('.flip-card');
+    flipCards.forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  });
+  

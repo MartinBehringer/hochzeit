@@ -1,102 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martins und Isabels Hochzeit</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <title>Martins &amp; Isabels Hochzeit</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Fixed Header / Navigation -->
   <header>
     <nav>
       <ul>
-        <li><a href="#landing">Start</a></li>
-        <li><a href="#details">Zeitplan</a></li>
+        <li><a href="#landing">Home</a></li>
+        <li><a href="#timeline">Zeitplan</a></li>
+        <li><a href="#church">Kirche</a></li>
+        <li><a href="#kaltenberg">Kaltenberg</a></li>
         <li><a href="#meal">Essen</a></li>
-        <li><a href="#engagement">Impressum</a></li>
+        <li><a href="#directions">Anfahrt</a></li>
+        <li><a href="#thanks">Danke</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="section" id="landing">
-    <div class="content">
-      <h1>Wir heiraten</h1>
-      <p>Martin &amp; Isabel</p>
-      <p>2. August 2025</p>
-    </div>  
-  </section>
-
-  <section class="section" id="details">
-    <div class="content">
-      <h2>Zeitplan</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">11:00 Uhr</div>
-            <div class="card-back">Kirchliche Trauung</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">14:00 Uhr</div>
-            <div class="card-back">Sektempfang<br>in Kaltenberg</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">16:00 Uhr</div>
-            <div class="card-back">Gruppenfoto</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">18:30 Uhr</div>
-            <div class="card-back">Abendessen</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-inner">
-            <div class="card-front">22:00 Uhr</div>
-            <div class="card-back">Party in der<br> Räuberhöhle</div>
-          </div>
-        </div>
+  <main>
+    <!-- 1. Landing Page -->
+    <section id="landing" class="section" style="background-image: url('pictures/pic1.JPEG'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <div class="content">
+        <h1 class="large-text">Wir heiraten</h1>
+        <p class="large-text">Isabel &amp; Martin</p>
+        <p class="large-text">2. August 2025</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="meal">
-    <div class="content">
-      <h2>Was gibt's zu essen?</h2>
-      <div class="meal-container">
-        <div class="meal-options">
-          <ul>
-            <li>Salat Buffet</li>
-            <div class="main-course-options">
-              <li>Krustenbraten</li>
-              <li>Pilz Risotto</li>
+    <!-- 2. Timeline Overview -->
+    <section id="timeline" class="section" style="background-image: url('pictures/pic2.JPEG'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <div class="content">
+        <h2>Zeitplan Übersicht</h2>
+        <div class="timeline">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">11:00 Uhr</div>
+              <div class="flip-card-back small-text">Traugottesdienst in der St. Markus Kirche</div>
             </div>
-            <li>Kaiserschmarn, Rote Grütze, Eis</li>
-          </ul>
-        </div>
-        <div class="meal-form">
-          <p>Bitte hier für die Hauptspeise abstimmen:</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZNlcKwdSyzFhQz8DjmsGCt7Y3GZknnCdDuyJVy7apSIFkOA/viewform?usp=sf_link" target="_blank" class="form-link">Meal Selection Form</a>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">ab 14:00 Uhr</div>
+              <div class="flip-card-back small-text">Sektempfang Kaltenberg</div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">16:00 Uhr</div>
+              <div class="flip-card-back small-text">Gruppenfoto</div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">18:00 Uhr</div>
+              <div class="flip-card-back small-text">Abendessen</div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">22:00 Uhr</div>
+              <div class="flip-card-back small-text">Party in der Räuberhöhle</div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="engagement">
-    <div class="content">
-      <h2>Wir freuen uns auf Euch!</h2>
-    </div>
-  </section>
+    <!-- 3. Church Ceremony -->
+    <section id="church" class="section" style="background-image: url('pictures/pic3.JPG'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <div class="dark-pane">
+        <div class="content">
+          <h2>Kirchliche Trauung</h2>
+          <p>Die Feier beginnt um 11:00 Uhr in der Kirche.</p>
+          <p>[Der Gottesdienst wird geleitet von Frau Susanne Geyer]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Second Location: Kaltenberg -->
+    <section id="kaltenberg" class="section" style="background-image: url('pictures/pic4.JPEG'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <div class="dark-pane">
+        <h2>Zweiter Ort: Kaltenberg</h2>
+        <p>Die Feier geht im wunderschönen Gelände auf dem Schloss Kaltenberg weiter.</p>
+        <p>Ihr könnt gern direkt nach der Kirche nach Kaltenberg fahren. Dort warten kleine Häppchen und Getränke auf euch. Alternativ könnt ihr euch kurz frisch machen, und später eintrudeln.]</p>
+        <p>Um 16:00 Uhr solltet ihr alle da sein, um auf dem Gruppenfoto zu sein.  </p>
+      </div>
+    </section>
+
+    <!-- 5. Meal Choice -->
+    <section id="meal" class="section" style="background-image: url('pictures/pic5.JPEG'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <div class="content">
+        <h2>Essensauswahl</h2>
+        <p>Bitte wählt euer Menü aus.</p>
+        <div class="meal-cards">
+          <div class="course-card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">Vorspeise</div>
+                <div class="flip-card-back">Salat Buffet</div>
+              </div>
+            </div>
+          </div>
+          <div class="course-card">
+            <p>Hauptspeise (wähle eine):</p>
+            <div class="main-course">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">Option 1</div>
+                  <div class="flip-card-back">Krustenbraten</div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">Option 2</div>
+                  <div class="flip-card-back">Pilz Risotto</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">Nachspeise</div>
+                <div class="flip-card-back">Kaiserschmarn, Rote Grütze, Eis</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZNlcKwdSyzFhQz8DjmsGCt7Y3GZknnCdDuyJVy7apSIFkOA/viewform?usp=sf_link" target="_blank">
+          Zum Essensauswahlformular
+        </a>
+      </div>
+    </section>
+
+    <!-- 6. Getting There / Directions -->
+    <section id="directions" class="section" style="background-image: url('pictures/pic6.JPEG'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <div class="dark-pane">
+        <h2>Anfahrt und Parkmöglichkeiten</h2>
+        <p>Hier findet ihr Informationen zur Anfahrt und zu Parkmöglichkeiten. Nutzt den folgenden Link, um die Route in eurem Navigationssystem zu planen.</p>
+        <a href="https://www.google.com/maps" target="_blank">Route auf Google Maps</a>
+      </div>
+    </section>
+
+    <!-- 7. End Page / Thanks -->
+    <section id="thanks" class="section" style="background-image: url('pictures/pic7.JPEG'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+      <div class="content">
+        <h2>Vielen Dank!</h2>
+        <p>Wir bedanken uns herzlich für eure Teilnahme an unserem besonderen Tag. Wir freuen uns auf euch!</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Isabel &amp; Martin</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
