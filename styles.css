@@ -128,6 +128,7 @@
   
   .flip-card-back {
     transform: rotateY(180deg);
+    font-size: 0.8em; /* Increase the font size for the emojis */
   }
   
   /* Dark overlay for text */
