@@ -9,166 +9,218 @@
     --link-hover-color: #50e3c2;
     --font-primary: 'Open Sans', sans-serif;
     --font-secondary: 'Poppins', sans-serif;
-}
-
-/* Global Styles */
-* {
+  }
+  
+  /* Global Styles */
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body, html {
+  }
+  
+  body, html {
     height: 100%;
     scroll-behavior: smooth;
     font-family: var(--font-primary);
-}
-
-/* Section Styles */
-.section {
+  }
+  
+  /* Header Styles */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  header nav ul li {
+    margin: 0 15px;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding-top: 60px; /* Adjust for header height */
     height: 100vh;
     width: 100%;
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--text-color);
-}
-
-#landing {
-    background-image: url('pictures/Background1.jpg');
-}
-
-#details {
-    background-image: url('pictures/Background2.JPEG');
+  }
+  
+  /* Landing Section */
+  #landing {
+    background: url('pictures/Background1.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  /* Details Section */
+  #details {
+    background: url('pictures/Background2.JPEG') no-repeat center center;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
-}
-
-#meal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url('pictures/meal1.jpg') left center no-repeat, url('pictures/meal2.jpeg') right center no-repeat;
-    background-size: cover, 50% 100%, 50% 100%;
-}
-
-#engagement {
-    background-image: url('pictures/engagement.jpeg');
     background-size: cover;
-    background-position: center;
+  }
+  
+  /* Meal Section */
+  #meal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), 
+                url('pictures/meal1.jpg') left center no-repeat, 
+                url('pictures/meal2.jpeg') right center no-repeat;
+    background-size: cover, 50% 100%, 50% 100%;
+  }
+  
+  /* Engagement Section */
+  #engagement {
+    background: url('pictures/engagement.jpeg') no-repeat center center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#engagement .content {
+  }
+  #engagement .content {
     background: rgba(0, 0, 0, 0.4);
     padding: 2rem;
     border-radius: 10px;
-    color: var(--text-color);
-}
-
-/* Content Styles */
-.content {
+  }
+  
+  /* Content Container */
+  .content {
     background: rgba(0, 0, 0, 0.4);
     padding: 2rem;
     border-radius: 10px;
     max-width: 80%;
-}
-
-.center-img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Typography */
-h1, h2 {
+  }
+  
+  /* Typography */
+  h1, h2 {
     font-family: var(--font-secondary);
-}
-
-h1 {
+  }
+  h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-}
-
-h2 {
+  }
+  h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-}
-
-p, ul {
+  }
+  p, ul {
     font-size: 1.2rem;
-}
-
-ul {
+  }
+  ul {
     list-style: none;
-}
-
-ul li {
+  }
+  ul li {
     background: rgba(255, 255, 255, 0.2);
     margin: 0.5rem 0;
     padding: 0.75rem;
     border-radius: 5px;
-}
-
-/* Form Styles */
-form {
+  }
+  
+  /* Card Styles */
+  .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 10px;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+  }
+  .card-front {
+    background: #333;
+  }
+  .card-back {
+    background: #555;
+    transform: rotateY(180deg);
+  }
+  
+  /* Form and Meal Choices Styles */
+  form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-form label {
+  }
+  form label {
     margin: 10px 0 5px;
-}
-
-form input, form select {
+  }
+  form input, form select {
     padding: 10px;
     margin-bottom: 10px;
     width: 80%;
     max-width: 300px;
-}
-
-form button {
+  }
+  form button {
     padding: 10px 20px;
     background-color: var(--primary-color);
     color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-form button:hover {
+  }
+  form button:hover {
     background-color: var(--secondary-color);
-}
-
-/* Meal Choices Styles */
-#meal-choices {
+  }
+  
+  #meal-choices {
     margin-top: 20px;
     text-align: left;
-}
-
-#meal-choices ul {
+  }
+  #meal-choices ul {
     list-style: none;
     padding: 0;
-}
-
-#meal-choices ul li {
+  }
+  #meal-choices ul li {
     background: rgba(255, 255, 255, 0.2);
     margin: 0.5rem 0;
     padding: 0.75rem;
     border-radius: 5px;
-}
-
-/* Two-Column Layout for Meal Section */
-.meal-container {
+  }
+  
+  /* Two-Column Layout for Meal Section */
+  .meal-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -176,34 +228,29 @@ form button:hover {
     background: rgba(0, 0, 0, 0.4);
     padding: 2rem;
     border-radius: 10px;
-}
-
-.meal-options, .meal-form {
+  }
+  .meal-options, .meal-form {
     flex: 1;
     margin: 10px;
-}
-
-.meal-options ul {
+  }
+  .meal-options ul {
     list-style: none;
     padding: 0;
-}
-
-.meal-options ul li {
+  }
+  .meal-options ul li {
     background: rgba(255, 255, 255, 0.2);
     margin: 0.5rem 0;
     padding: 0.75rem;
     border-radius: 5px;
     font-size: 1.2rem;
-}
-
-.meal-form iframe {
+  }
+  .meal-form iframe {
     width: 100%;
     max-width: 640px;
     height: 800px;
     border: none;
-}
-
-.meal-form .form-link {
+  }
+  .meal-form .form-link {
     display: inline-block;
     padding: 10px 20px;
     background-color: var(--primary-color);
@@ -211,52 +258,72 @@ form button:hover {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
-}
-
-.meal-form .form-link:hover {
+  }
+  .meal-form .form-link:hover {
     background-color: var(--secondary-color);
-}
-
-/* Main Course Options Styles */
-.main-course-options {
+  }
+  
+  /* Main Course Options Styles */
+  .main-course-options {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Add this line to increase space between main courses */
-}
-
-.main-course-options li {
+    gap: 20px;
+  }
+  .main-course-options li {
     flex: 1;
     margin: 0.5rem;
-}
-
-/* Footer Styles */
-footer {
+  }
+  
+  /* Footer Styles */
+  footer {
     background-color: var(--footer-background);
     color: #ffffff;
     text-align: center;
     padding: 1rem 0;
     width: 100%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+      font-size: 2rem;
     }
-
     h2 {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
-
     p, ul {
-        font-size: 1rem;
+      font-size: 1rem;
     }
-
     .content {
-        padding: 1rem;
+      padding: 1rem;
     }
-
-    .center-img {
-        max-width: 250px;
+    .meal-container {
+      flex-direction: column;
+      align-items: center;
     }
-}
+    .meal-options, .meal-form {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .main-course-options {
+      flex-direction: column;
+      gap: 10px;
+    }
+    header nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    header nav ul li {
+      margin: 10px 0;
+    }
+    /* Adjust Cards for Mobile */
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: 90%;
+      margin: 10px 0;
+    }
+  }
+  
