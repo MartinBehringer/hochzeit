@@ -96,6 +96,7 @@
     perspective: 1000px;
     cursor: pointer;
     position: relative;
+    z-index: 2; /* Ensure flip cards are on a higher layer */
   }
   .flip-card-inner {
     position: relative;
@@ -184,6 +185,22 @@
   a:hover {
     text-decoration: underline;
   }
+
+  .meal-form a {
+    z-index: 1; /* Ensure link is on a lower layer */
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  .meal-form a:hover {
+    background-color: #50e3c2;
+  }
   
   /* Footer */
   footer {
@@ -216,3 +233,11 @@
         font-size: 0.9rem;
     }
   }
+
+  /* Meal Section Adjustments */
+  #meal .dark-pane {
+    pointer-events: none;
+}
+#meal .dark-pane > * {
+    pointer-events: auto;
+}
